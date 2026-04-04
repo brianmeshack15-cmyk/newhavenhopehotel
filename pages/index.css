@@ -8,11 +8,7 @@
   font-weight: 400;
   font-style: normal;
 }
-welcome1{
-  /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjIDZOwYaE_rWwELCQByeTLA48MylTRf568w&s);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; */
+#welcome1{
   color: inherit;
   background-color: transparent;
   margin-top: auto;
@@ -31,7 +27,7 @@ min-height: 100vh;
   box-sizing: border-box;
 }
 }
-mainnavba ul {
+#mainnavba ul {
   list-style: none;
   display: flex;
   gap: 15px;
