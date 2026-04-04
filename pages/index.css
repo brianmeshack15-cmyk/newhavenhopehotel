@@ -36,3 +36,7 @@ min-height: 100vh;
   display: flex;
   gap: 15px;
 }
+.jumbotron{
+ color: inherit;
+  back-groundcolor: transparent;
+}
