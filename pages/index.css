@@ -13,12 +13,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; */
-  background-color: rgba(255, 255, 255, 0.5)
-  border: 1px black solid;
+  background-color: transparent;
   margin-top: auto;
   margin-left: 5px;
   margin-right: 5px;
-  width: 50%;
+  width: 40%;
 }
 body{
 background-image: url(https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvdGVsfGVufDB8fDB8fHww);
@@ -35,8 +34,4 @@ min-height: 100vh;
   list-style: none;
   display: flex;
   gap: 15px;
-}
-.jumbotron{
- color: inherit;
-  back-groundcolor: transparent;
 }
