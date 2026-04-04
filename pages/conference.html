@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Booking | New Haven Hope Hotel</title>
+    <link rel="stylesheet" href="conference.css">
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+
+<!-- 🔝 Navbar -->
+<nav id="mainnavbar">
+  <a href="../index.html"><h2>New Haven Hope Hotel</h2></a>
+
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li> <a href="menu.html">Menu</a></li>
+      <li><a href="reservation.html">Reservations</a></li>
+      <li><a href="accommodation.html">Accommodations</a></li>
+      <li><a href="conference.html">Conference</a></li>
+      <li><a href="contacts.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- 🏢 Header -->
+<header class="conference-hero">
+    <h1>Conference & Event Booking</h1>
+    <p>Host your meetings, events, and conferences with us</p>
+</header>
+
+<!-- 🏛️ Conference Form -->
+<section class="conference-container">
+
+    <form id="conferenceForm">
+
+        <label>Full Name</label>
+        <input type="text" name="name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" required>
+
+        <label>Event Type</label>
+        <select name="event_type">
+            <option value="meeting">Business Meeting</option>
+            <option value="conference">Conference</option>
+            <option value="wedding">Wedding</option>
+            <option value="party">Private Party</option>
+        </select>
+
+        <label>Number of Attendees</label>
+        <input type="number" name="attendees" min="1" required>
+
+        <label>Event Date</label>
+        <input type="date" name="date" required>
+
+        <label>Start Time</label>
+        <input type="time" name="start_time" required>
+
+        <label>End Time</label>
+        <input type="time" name="end_time" required>
+
+        <label>Additional Requests</label>
+        <textarea name="requests" placeholder="e.g. Projector, catering, decorations..."></textarea>
+
+        <button type="submit">Book Conference</button>
+
+    </form>
+
+</section>
+
+<!-- 📞 Footer -->
+<footer>
+    <p>&copy; 2026 New Haven Hope Hotel. All rights reserved.</p>
+</footer>
+
+<!-- 🔌 JavaScript -->
+<script>
+document.getElementById("conferenceForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const data = {
+        name: this.name.value,
+        email: this.email.value,
+        phone: this.phone.value,
+        event_type: this.event_type.value,
+        attendees: this.attendees.value,
+        date: this.date.value,
+        start_time: this.start_time.value,
+        end_time: this.end_time.value,
+        requests: this.requests.value
+    };
+
+    fetch("http://127.0.0.1:5000/api/conferences", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(response => {
+        alert("Conference booked successfully!");
+    })
+    .catch(err => {
+        console.error(err);
+        alert("Error booking conference.");
+    });
+});
+</script>
+
+</body>
+</html>

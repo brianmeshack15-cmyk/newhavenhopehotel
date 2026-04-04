@@ -1,0 +1,51 @@
+/* Contact Hero */
+.contact-hero {
+  text-align: center;
+  padding: 40px;
+  background: #747293;
+  color: white;
+}
+
+/* Layout */
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Form */
+.contact-form {
+  width: 45%;
+  background: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Info */
+.contact-info {
+  width: 45%;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+/* Button */
+button {
+  background: #747293;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+#mainnavbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}

@@ -1,0 +1,49 @@
+/* Header */
+.conference-hero {
+  text-align: center;
+  padding: 40px;
+  background: #212529;
+  color: white;
+}
+
+/* Layout */
+.conference-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* Form */
+form {
+  width: 450px;
+  background: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+/* Inputs */
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Button */
+button {
+  background: #747293;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+#mainnavbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+#mainnavbar{
+  background: #6C757D;
+  color: #7F5539;
+}

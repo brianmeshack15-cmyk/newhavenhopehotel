@@ -1,0 +1,29 @@
+.jumbotron{
+  background-color: #cdd0d3;
+  font-family: 'San Serif';
+  color: #1c6e2f;
+  border: black 2px solid;
+  width: 90%;
+  text-align: left;
+  height: auto;
+  margin: 10px;
+
+}
+#heading{
+  color: #223b27;
+}
+.btn{
+  background-color: black;
+}
+#last{
+  color: white;
+}
+#checkout{
+  background-color: #cdd0d3;
+  font-family: 'San Serif';
+  color: #1c6e2f;
+  border: black 2px solid;
+  width: 50%;
+  text-align: left;
+  height: 500px;
+  margin: 10px;

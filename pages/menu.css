@@ -1,0 +1,153 @@
+/* ===== Global Styles ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ===== Navbar ===== */
+#mainnavbar {
+    background-color: #747293;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+#mainnavbar h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#mainnavbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+#mainnavbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#mainnavbar a:hover {
+    color: #f0c14b;
+}
+
+/* ===== Hero Section ===== */
+.menu-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #747293;
+    color: white;
+}
+
+.menu-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.menu-hero p {
+    font-size: 1.2rem;
+}
+
+/* ===== Menu Container ===== */
+.menu-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===== Menu Categories ===== */
+.menu-category {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.category-header {
+    background-color: #f4f4f4;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.category-header:hover {
+    background-color: #e0e0e0;
+}
+
+.category-header .arrow {
+    transition: transform 0.3s ease;
+}
+
+.category-header.active .arrow {
+    transform: rotate(90deg);
+}
+
+/* ===== Category Items (Dropdown) ===== */
+.category-items {
+    display: none;
+    padding: 15px 20px;
+    border-top: 1px solid #ccc;
+}
+
+.category-items ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.category-items li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+}
+
+.category-items li:last-child {
+    border-bottom: none;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .menu-container {
+        width: 95%;
+    }
+
+    .menu-hero h1 {
+        font-size: 2rem;
+    }
+
+    #mainnavbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

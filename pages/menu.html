@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | New Haven Hope Hotel</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        /* Navbar */
+        #mainnavbar {
+            background-color: #747293;
+            padding: 10px;
+            color: white;
+        }
+
+        #mainnavbar ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        #mainnavbar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Hero */
+        .menu-hero {
+            text-align: center;
+            padding: 40px;
+            background: #747293;
+            color: white;
+        }
+
+        /* Menu Container */
+        .menu-container {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Category */
+        .menu-category {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .category-header {
+            background-color: #f4f4f4;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .category-items {
+            display: none;
+            padding: 15px;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+        }
+
+        .category-items ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .category-items li {
+            padding: 8px 0;
+        }
+
+        .category-header .arrow {
+            transition: transform 0.3s;
+        }
+
+        .category-header.active .arrow {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+
+<!-- 🔝 Navbar -->
+<nav id="mainnavbar">
+  <a href="../index.html"><h2>New Haven Hope Hotel</h2></a>
+
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li> <a href="menu.html">Menu</a></li>
+      <li><a href="reservation.html">Reservations</a></li>
+      <li><a href="accommodation.html">Accommodations</a></li>
+      <li><a href="conference.html">Conference</a></li>
+      <li><a href="contacts.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- 🍴 Header -->
+<header class="menu-hero">
+    <h1>Our Menu</h1>
+    <p>Explore our delicious dishes</p>
+</header>
+
+<!-- 🍲 Menu Categories -->
+<section class="menu-container">
+
+    <!-- Starters -->
+    <div class="menu-category">
+        <div class="category-header">
+            Starters
+            <span class="arrow">▶</span>
+        </div>
+        <div class="category-items">
+            <ul>
+                <li>Garlic Bread - KES 500</li>
+                <li>Caesar Salad - KES 700</li>
+                <li>Soup of the Day - KES 600</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Courses -->
+    <div class="menu-category">
+        <div class="category-header">
+            Main Courses
+            <span class="arrow">▶</span>
+        </div>
+        <div class="category-items">
+            <ul>
+                <li>Grilled Chicken - KES 1200</li>
+                <li>Beef Steak - KES 1500</li>
+                <li>Vegetable Lasagna - KES 1100</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Desserts -->
+    <div class="menu-category">
+        <div class="category-header">
+            Desserts
+            <span class="arrow">▶</span>
+        </div>
+        <div class="category-items">
+            <ul>
+                <li>Chocolate Cake - KES 600</li>
+                <li>Fruit Salad - KES 500</li>
+                <li>Ice Cream Sundae - KES 550</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Beverages -->
+    <div class="menu-category">
+        <div class="category-header">
+            Beverages
+            <span class="arrow">▶</span>
+        </div>
+        <div class="category-items">
+            <ul>
+                <li>Fresh Juice - KES 400</li>
+                <li>Coffee / Tea - KES 350</li>
+                <li>Soda / Soft Drinks - KES 300</li>
+            </ul>
+        </div>
+    </div>
+
+</section>
+
+<!-- 📞 Footer -->
+<footer>
+    <p>&copy; 2026 New Haven Hope Hotel. All rights reserved.</p>
+</footer>
+
+<!-- 🔌 JavaScript for Dropdown -->
+<script>
+const categories = document.querySelectorAll('.category-header');
+
+categories.forEach(category => {
+    category.addEventListener('click', () => {
+        category.classList.toggle('active');
+        const items = category.nextElementSibling;
+        if(items.style.display === "block"){
+            items.style.display = "none";
+        } else {
+            items.style.display = "block";
+        }
+    });
+});
+</script>
+
+</body>
+</html>

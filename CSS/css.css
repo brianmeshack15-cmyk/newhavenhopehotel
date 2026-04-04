@@ -1,0 +1,30 @@
+li{
+  color: red;
+}
+.topitems{
+  color: blue;
+}
+#two{
+  border: 3px dotted black;
+}
+h1{
+  font-family: 'Arial'; color: rgb(31 139 19);
+  border: black solid 3px;
+  width: 50%;
+  text-align: center;
+  /* text-decoration: underline; */
+}
+body{
+  font-size: 15px;
+}
+#top{
+  border: black 3px solid;
+  width: 30%;
+  margin: 10px 20px 100px 150px;
+}
+#bottom{
+border: 3px black solid;
+width: 40%;
+margin: auto;
+padding: 10px;
+}

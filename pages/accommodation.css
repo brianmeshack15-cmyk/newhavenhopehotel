@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Navbar */
+#mainnavbar {
+  background-color: #747293;
+  padding: 10px;
+  color: white;
+}
+
+#mainnavbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+#mainnavbar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 50px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+}
+
+/* Rooms */
+.rooms {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.room-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 300px;
+  text-align: center;
+  background: white;
+}
+
+.room-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+button {
+  padding: 10px;
+  background-color: #747293;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Amenities */
+.amenities {
+  padding: 20px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: white;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations | New Haven Hope Hotel</title>
+    <link rel="stylesheet" href="reservation.css">
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+
+<!-- 🔝 Navbar -->
+<nav id="mainnavbar">
+  <a href="../index.html"><h2>New Haven Hope Hotel</h2></a>
+
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li> <a href="menu.html">Menu</a></li>
+      <li><a href="reservation.html">Reservations</a></li>
+      <li><a href="accommodation.html">Accommodations</a></li>
+      <li><a href="conference.html">Conference</a></li>
+      <li><a href="contacts.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- 🏨 Header -->
+<header class="reservation-hero">
+    <h1>Book Your Stay</h1>
+    <p>Reserve your room in just a few steps</p>
+</header>
+
+<!-- 📅 Reservation Form -->
+<section class="reservation-container">
+
+    <form id="reservationForm">
+
+        <label>Full Name</label>
+        <input type="text" name="name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" required>
+
+        <label>Room Type</label>
+        <select name="room">
+            <option value="standard">Standard Room</option>
+            <option value="deluxe">Deluxe Room</option>
+            <option value="suite">Executive Suite</option>
+        </select>
+
+        <label>Check-in Date</label>
+        <input type="date" name="checkin" required>
+
+        <label>Check-out Date</label>
+        <input type="date" name="checkout" required>
+
+        <label>Number of Guests</label>
+        <input type="number" name="guests" min="1" required>
+
+        <button type="submit">Reserve Now</button>
+
+    </form>
+
+</section>
+
+<!-- 📞 Footer -->
+<footer>
+    <p>&copy; 2026 New Haven Hope Hotel. All rights reserved.</p>
+</footer>
+
+<!-- 🔌 JavaScript (Connect to Backend) -->
+<script>
+document.getElementById("reservationForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const data = {
+        name: this.name.value,
+        email: this.email.value,
+        phone: this.phone.value,
+        room: this.room.value,
+        checkin: this.checkin.value,
+        checkout: this.checkout.value,
+        guests: this.guests.value
+    };
+
+    fetch("http://127.0.0.1:5000/api/reservations", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(response => {
+        alert("Reservation successful!");
+    })
+    .catch(err => {
+        console.error(err);
+        alert("Error making reservation.");
+    });
+});
+</script>
+
+</body>
+</html>
