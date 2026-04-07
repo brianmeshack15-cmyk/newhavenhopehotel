@@ -33,3 +33,33 @@ min-height: 100vh;
   display: flex;
   gap: 15px;
 }
+.bottom-bar {
+  /* Fix to bottom */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  
+  /* Layout and Styling */
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-around; /* Distribute items evenly */
+  padding: 10px 0;
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.bottom-bar a {
+  color: white;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+
+.bottom-bar a:hover {
+  text-decoration: underline;
+}
+
+/* Add padding to the body so content isn't hidden by the bar */
+body {
+  margin-bottom: 60px; /* Adjust based on bar height */
+}
