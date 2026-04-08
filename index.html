@@ -1,43 +1,123 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>New Haven Hope Hotel</title>
-    <script src="pages\index.js"></script>
-    <link rel="stylesheet" href="pages\index.css">
-    <link rel="stylesheet" href="pages\bootstrap.css">
 
-  </head>
-  <body class="body">
-    <nav  id="mainnavbar" class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-          <a href="#" style="color: white; text-decoration: none;" class="navbar-brand" id="navbarbrand"><h1>New Haven Hope Hotel</h1></a>
-        </div>
-    <div id="mainnavba">
-    <ul>
-      <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
-      <li> <a href="pages\menu.html" style="color: white; text-decoration: none;">Menu</a></li>
-      <li><a href="pages\reservation.html" style="color: white; text-decoration: none;">Reservations</a></li>
-      <li><a href="pages\accommodation.html" style="color: white; text-decoration: none;">Accommodations</a></li>
-      <li><a href="pages\conference.html" style="color: white; text-decoration: none;">Conference</a></li>
-      <li><a href="pages\contacts.html" style="color: white; text-decoration: none;">Contact</a></li>
-    </ul>
-    </div>
-    </div>
-    </nav>
-    <div id="text">
-      <h1 id="welcome2" style="color: white; text-decoration: none;">Karibu Haven!</h1>
-      <p id="paragraph" style="color: white; text-decoration: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="bottom-bar">
-        <a href="index.html">Home</a>
-        <a href="pages\menu.html" style="color: white; text-decoration: none;">Menu</a>
-        <a href="pages\reservation.html" style="color: white; text-decoration: none;">Reservations</a>
-        <a href="pages\accommodation.html" style="color: white; text-decoration: none;">Accommodations</a>
-        <a href="pages\conference.html" style="color: white; text-decoration: none;">Conference</a>
-        <a href="pages\contacts.html" style="color: white; text-decoration: none;" class="active">Contact</a>
-        <a href="pages/about.html" style="color: white; text-decoration: none;">About</a>
-    </div>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Haven Hope Hotel</title>
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Fonts -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- 🔝 NAVBAR -->
+
+  <header class="navbar">
+    <div class="logo">New Haven Hope</div>
+
+```
+<nav class="nav-links" id="navLinks">
+  <a href="#">Home</a>
+  <a href="pages/menu.html">Menu</a>
+  <a href="pages/reservation.html">Reservations</a>
+  <a href="pages/accommodation.html">Rooms</a>
+  <a href="pages/conference.html">Conference</a>
+  <a href="pages/contacts.html">Contact</a>
+</nav>
+
+<button class="menu-toggle" id="menuToggle">☰</button>
+```
+
+  </header>
+
+  <!-- 🌄 HERO SECTION -->
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Karibu Haven</h1>
+      <p>Luxury, comfort, and unforgettable experiences await you.</p>
+
+```
+  <div class="hero-buttons">
+    <a href="pages/reservation.html" class="btn primary">Book Now</a>
+    <a href="pages/accommodation.html" class="btn secondary">Explore Rooms</a>
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- 🏨 FEATURES -->
+
+  <section class="features">
+    <h2>Why Choose Us</h2>
+
+```
+<div class="feature-grid">
+  <div class="card">
+    <h3>Luxury Rooms</h3>
+    <p>Elegant and comfortable rooms designed for relaxation.</p>
+  </div>
+
+  <div class="card">
+    <h3>Fine Dining</h3>
+    <p>Enjoy world-class meals from our expert chefs.</p>
+  </div>
+
+  <div class="card">
+    <h3>Conference Halls</h3>
+    <p>Modern spaces perfect for business and events.</p>
+  </div>
+
+  <div class="card">
+    <h3>Spa & Wellness</h3>
+    <p>Relax and recharge with our wellness services.</p>
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- 📞 CALL TO ACTION -->
+
+  <section class="cta">
+    <h2>Ready to Experience Luxury?</h2>
+    <a href="pages/reservation.html" class="btn primary">Make a Reservation</a>
+  </section>
+
+  <!-- 🔻 FOOTER -->
+
+  <footer class="footer">
+    <p>© 2026 New Haven Hope Hotel</p>
+
+```
+<div class="footer-links">
+  <a href="#">Home</a>
+  <a href="pages/menu.html">Menu</a>
+  <a href="pages/reservation.html">Reservations</a>
+  <a href="pages/contacts.html">Contact</a>
+</div>
+```
+
+  </footer>
+
+  <!-- JS -->
+
+  <script>
+    const toggle = document.getElementById("menuToggle");
+    const nav = document.getElementById("navLinks");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
+
+</body>
 </html>
