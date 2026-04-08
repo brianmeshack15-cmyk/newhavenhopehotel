@@ -1,65 +1,130 @@
-#mainnavbar{
-  color: inherit;
-  background-color: transparent;
-  margin-top: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-family: "Boldonse", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-#text{
-  color: White;
-  background-color: transparent;
-  margin-top: auto;
-  margin-left: 5px;
-  margin-right: 5px;
-  border: transparent;
-  width: 40%;
-  margin: right;
-}
-body{
-background-image: url(https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvdGVsfGVufDB8fDB8fHww);
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
-min-height: 100vh;
-}
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-}
-#mainnavba ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-.bottom-bar {
-  /* Fix to bottom */
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  
-  /* Layout and Styling */
-  background-color: #333;
-  color: white;
-  display: flex;
-  justify-content: space-around; /* Distribute items evenly */
-  padding: 10px 0;
-  z-index: 1000; /* Ensure it stays on top of other content */
-}
+  font-family: 'Poppins', sans-serif;
+  }
 
-.bottom-bar a {
-  color: white;
-  text-decoration: none;
-  font-family: Arial, sans-serif;
-}
-
-.bottom-bar a:hover {
-  text-decoration: underline;
-}
-
-/* Add padding to the body so content isn't hidden by the bar */
 body {
-  margin-bottom: 60px; /* Adjust based on bar height */
+background: #111;
+color: white;
+}
+
+/* NAVBAR */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+background: black;
+position: fixed;
+width: 100%;
+top: 0;
+}
+
+.logo {
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+.nav-links a {
+margin: 0 10px;
+color: white;
+text-decoration: none;
+}
+
+.menu-toggle {
+display: none;
+font-size: 24px;
+background: none;
+border: none;
+color: white;
+}
+
+/* HERO */
+.hero {
+height: 100vh;
+background: url('hotel.jpg') center/cover no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.hero h1 {
+font-size: 3rem;
+}
+
+.hero-buttons {
+margin-top: 20px;
+}
+
+.btn {
+padding: 10px 20px;
+margin: 5px;
+border-radius: 5px;
+text-decoration: none;
+}
+
+.primary {
+background: gold;
+color: black;
+}
+
+.secondary {
+border: 1px solid white;
+color: white;
+}
+
+/* FEATURES */
+.features {
+padding: 80px 20px;
+text-align: center;
+}
+
+.feature-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 20px;
+}
+
+.card {
+background: #222;
+padding: 20px;
+border-radius: 10px;
+}
+
+/* CTA */
+.cta {
+text-align: center;
+padding: 50px;
+background: #000;
+}
+
+/* FOOTER */
+.footer {
+text-align: center;
+padding: 20px;
+background: black;
+}
+
+.footer-links a {
+margin: 0 10px;
+color: white;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+.nav-links {
+display: none;
+flex-direction: column;
+}
+
+.nav-links.active {
+display: flex;
+}
+
+.menu-toggle {
+display: block;
+}
 }
