@@ -1,194 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu | New Haven Hope Hotel</title>
-    <link rel="stylesheet" href="menu.css">
-    <link rel="stylesheet" href="bootstrap.css">
-    <style>
-        /* Navbar */
-        #mainnavbar {
-            background-color: #747293;
-            padding: 10px;
-            color: white;
-        }
+<meta charset="UTF-8">
+<title>Hotel Menu</title>
 
-        #mainnavbar ul {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #111;
+        color: white;
+        overflow-x: hidden;
+    }
 
-        #mainnavbar a {
-            color: white;
-            text-decoration: none;
-        }
+    /* Sections */
+    .section {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transform: rotateY(90deg);
+        opacity: 0;
+        transition: all 0.8s ease;
+    }
 
-        /* Hero */
-        .menu-hero {
-            text-align: center;
-            padding: 40px;
-            background: #747293;
-            color: white;
-        }
+    .active {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
 
-        /* Menu Container */
-        .menu-container {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
 
-        /* Category */
-        .menu-category {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+    /* Floating buttons */
+    .nav {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 
-        .category-header {
-            background-color: #f4f4f4;
-            padding: 15px;
-            cursor: pointer;
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .nav button {
+        padding: 12px 18px;
+        border: none;
+        border-radius: 30px;
+        background: orange;
+        color: black;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
 
-        .category-items {
-            display: none;
-            padding: 15px;
-            background-color: #fff;
-            border-top: 1px solid #ccc;
-        }
+    .nav button:hover {
+        background: white;
+    }
 
-        .category-items ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .category-items li {
-            padding: 8px 0;
-        }
-
-        .category-header .arrow {
-            transition: transform 0.3s;
-        }
-
-        .category-header.active .arrow {
-            transform: rotate(90deg);
-        }
-    </style>
+    /* Menu items */
+    .menu-item {
+        margin: 10px;
+        font-size: 1.2rem;
+    }
+</style>
 </head>
+
 <body>
 
-<!-- 🔝 Navbar -->
-<nav id="mainnavbar">
-  <a href="../index.html"><h2>New Haven Hope Hotel</h2></a>
+<!-- Sections -->
 
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li> <a href="menu.html">Menu</a></li>
-      <li><a href="reservation.html">Reservations</a></li>
-      <li><a href="accommodation.html">Accommodations</a></li>
-      <li><a href="conference.html">Conference</a></li>
-      <li><a href="contacts.html">Contact</a></li>
-    </ul>
-</nav>
+<div id="home" class="section active">
+    <h1>Welcome</h1>
+    <p>New Haven Hope Hotel Menu</p>
+</div>
 
-<!-- 🍴 Header -->
-<header class="menu-hero">
-    <h1>Our Menu</h1>
-    <p>Explore our delicious dishes</p>
-</header>
+<div id="food" class="section">
+    <h1>Food Menu</h1>
+    <div class="menu-item">Grilled Chicken - KES 800</div>
+    <div class="menu-item">Beef Steak - KES 1200</div>
+    <div class="menu-item">Vegetable Pasta - KES 700</div>
+</div>
 
-<!-- 🍲 Menu Categories -->
-<section class="menu-container">
+<div id="drinks" class="section">
+    <h1>Drinks</h1>
+    <div class="menu-item">Fresh Juice - KES 300</div>
+    <div class="menu-item">Cocktail - KES 600</div>
+    <div class="menu-item">Coffee - KES 250</div>
+</div>
 
-    <!-- Starters -->
-    <div class="menu-category">
-        <div class="category-header">
-            Starters
-            <span class="arrow">▶</span>
-        </div>
-        <div class="category-items">
-            <ul>
-                <li>Garlic Bread - KES 500</li>
-                <li>Caesar Salad - KES 700</li>
-                <li>Soup of the Day - KES 600</li>
-            </ul>
-        </div>
-    </div>
+<div id="desserts" class="section">
+    <h1>Desserts</h1>
+    <div class="menu-item">Ice Cream - KES 400</div>
+    <div class="menu-item">Chocolate Cake - KES 500</div>
+</div>
 
-    <!-- Main Courses -->
-    <div class="menu-category">
-        <div class="category-header">
-            Main Courses
-            <span class="arrow">▶</span>
-        </div>
-        <div class="category-items">
-            <ul>
-                <li>Grilled Chicken - KES 1200</li>
-                <li>Beef Steak - KES 1500</li>
-                <li>Vegetable Lasagna - KES 1100</li>
-            </ul>
-        </div>
-    </div>
+<!-- Floating Navigation -->
 
-    <!-- Desserts -->
-    <div class="menu-category">
-        <div class="category-header">
-            Desserts
-            <span class="arrow">▶</span>
-        </div>
-        <div class="category-items">
-            <ul>
-                <li>Chocolate Cake - KES 600</li>
-                <li>Fruit Salad - KES 500</li>
-                <li>Ice Cream Sundae - KES 550</li>
-            </ul>
-        </div>
-    </div>
+<div class="nav">
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('food')">Food</button>
+    <button onclick="showSection('drinks')">Drinks</button>
+    <button onclick="showSection('desserts')">Desserts</button>
+</div>
 
-    <!-- Beverages -->
-    <div class="menu-category">
-        <div class="category-header">
-            Beverages
-            <span class="arrow">▶</span>
-        </div>
-        <div class="category-items">
-            <ul>
-                <li>Fresh Juice - KES 400</li>
-                <li>Coffee / Tea - KES 350</li>
-                <li>Soda / Soft Drinks - KES 300</li>
-            </ul>
-        </div>
-    </div>
-
-</section>
-
-<!-- 📞 Footer -->
-<footer>
-    <p>&copy; 2026 New Haven Hope Hotel. All rights reserved.</p>
-</footer>
-
-<!-- 🔌 JavaScript for Dropdown -->
 <script>
-const categories = document.querySelectorAll('.category-header');
+    function showSection(id) {
+        let sections = document.querySelectorAll('.section');
 
-categories.forEach(category => {
-    category.addEventListener('click', () => {
-        category.classList.toggle('active');
-        const items = category.nextElementSibling;
-        if(items.style.display === "block"){
-            items.style.display = "none";
-        } else {
-            items.style.display = "block";
-        }
-    });
-});
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+
+        document.getElementById(id).classList.add('active');
+    }
 </script>
 
 </body>
