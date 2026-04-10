@@ -2,107 +2,225 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Hotel Menu</title>
+<title>New Haven Hope Hotel - Menu</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #111;
-        color: white;
-        overflow-x: hidden;
-    }
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    overflow-x: hidden;
+}
 
-    /* Sections */
-    .section {
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        transform: rotateY(90deg);
-        opacity: 0;
-        transition: all 0.8s ease;
-    }
+/* Top Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 15px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
 
-    .active {
-        transform: rotateY(0deg);
-        opacity: 1;
-    }
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-    h1 {
-        font-size: 3rem;
-        margin-bottom: 20px;
-    }
+.navbar a:hover {
+    color: orange;
+    transform: scale(1.1);
+}
 
-    /* Floating buttons */
-    .nav {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
+/* Sections */
+.section {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: rotateY(90deg);
+    opacity: 0;
+    transition: all 0.8s ease;
+    padding-top: 80px;
+}
 
-    .nav button {
-        padding: 12px 18px;
-        border: none;
-        border-radius: 30px;
-        background: orange;
-        color: black;
-        cursor: pointer;
-        font-weight: bold;
-        transition: 0.3s;
-    }
+.active {
+    transform: rotateY(0deg);
+    opacity: 1;
+}
 
-    .nav button:hover {
-        background: white;
-    }
+/* Titles */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
 
-    /* Menu items */
-    .menu-item {
-        margin: 10px;
-        font-size: 1.2rem;
-    }
+/* Floating buttons */
+.nav {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 30px;
+    background: orange;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav button:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px;
+    width: 220px;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: rgba(255,255,255,0.2);
+}
+
+.price {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: orange;
+}
+
+/* Booking button */
+.book-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    background: orange;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- Navbar -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="contact.html">Contact</a>
+</div>
+
 <!-- Sections -->
 
 <div id="home" class="section active">
     <h1>Welcome</h1>
-    <p>New Haven Hope Hotel Menu</p>
+    <p>Experience Luxury Dining</p>
 </div>
 
 <div id="food" class="section">
     <h1>Food Menu</h1>
-    <div class="menu-item">Grilled Chicken - KES 800</div>
-    <div class="menu-item">Beef Steak - KES 1200</div>
-    <div class="menu-item">Vegetable Pasta - KES 700</div>
+    <div class="card-container">
+        <div class="card">
+            <h3>Grilled Chicken</h3>
+            <div class="price">KES 800</div>
+            <button class="book-btn">Order</button>
+        </div>
+
+        <div class="card">
+            <h3>Beef Steak</h3>
+            <div class="price">KES 1200</div>
+            <button class="book-btn">Order</button>
+        </div>
+
+        <div class="card">
+            <h3>Vegetable Pasta</h3>
+            <div class="price">KES 700</div>
+            <button class="book-btn">Order</button>
+        </div>
+    </div>
 </div>
 
 <div id="drinks" class="section">
     <h1>Drinks</h1>
-    <div class="menu-item">Fresh Juice - KES 300</div>
-    <div class="menu-item">Cocktail - KES 600</div>
-    <div class="menu-item">Coffee - KES 250</div>
+    <div class="card-container">
+        <div class="card">
+            <h3>Fresh Juice</h3>
+            <div class="price">KES 300</div>
+            <button class="book-btn">Order</button>
+        </div>
+
+        <div class="card">
+            <h3>Cocktail</h3>
+            <div class="price">KES 600</div>
+            <button class="book-btn">Order</button>
+        </div>
+
+        <div class="card">
+            <h3>Coffee</h3>
+            <div class="price">KES 250</div>
+            <button class="book-btn">Order</button>
+        </div>
+    </div>
 </div>
 
 <div id="desserts" class="section">
     <h1>Desserts</h1>
-    <div class="menu-item">Ice Cream - KES 400</div>
-    <div class="menu-item">Chocolate Cake - KES 500</div>
+    <div class="card-container">
+        <div class="card">
+            <h3>Ice Cream</h3>
+            <div class="price">KES 400</div>
+            <button class="book-btn">Order</button>
+        </div>
+
+        <div class="card">
+            <h3>Chocolate Cake</h3>
+            <div class="price">KES 500</div>
+            <button class="book-btn">Order</button>
+        </div>
+    </div>
 </div>
 
 <!-- Floating Navigation -->
-
 <div class="nav">
     <button onclick="showSection('home')">Home</button>
     <button onclick="showSection('food')">Food</button>
@@ -111,15 +229,15 @@
 </div>
 
 <script>
-    function showSection(id) {
-        let sections = document.querySelectorAll('.section');
+function showSection(id) {
+    let sections = document.querySelectorAll('.section');
 
-        sections.forEach(section => {
-            section.classList.remove('active');
-        });
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
 
-        document.getElementById(id).classList.add('active');
-    }
+    document.getElementById(id).classList.add('active');
+}
 </script>
 
 </body>
